@@ -28,7 +28,9 @@ output_date() {
 }
 
 output_section() {
-  echo "\n$(dim "###| ") $(bold $(colored $1)) $(dim " |$(printf '%*s' "$((40 - ${#1}))" | tr ' ' '=')\n")"
+  echo
+  echo "$(dim "###| ") $(bold $(colored $1)) $(dim " |$(printf '%*s' "$((40 - ${#1}))" | tr ' ' '=')")"
+  echo
 }
 
 output_item () {
