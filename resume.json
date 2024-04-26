@@ -1,0 +1,157 @@
+{
+	"basics": {
+		"name": "Lucas Castro",
+		"label": "Senior Front-end Engineer @ Faster | TypeScript, Vue, React, UX, Accessibility & Performance",
+		"email": "contact@lucascastro.dev",
+		"url": "https://lucascastro.dev/",
+		"image": "https://avatars.githubusercontent.com/u/45610153",
+		"summary": "I'm a front-end developer with a passion for building scalable, high-performance web applications and components. I strongly believe that the value of an application is directly tied to its usability and accessibility.\n\nCurrently exploring the world of Open Source, publishing and contributing to projects that benefit both the community and other developers.",
+		"profiles": [
+			{
+				"network": "GitHub",
+				"username": "cstrlcs",
+				"url": "https://github.com/cstrlcs"
+			},
+			{
+				"network": "Linkedin",
+				"url": "https://linkedin.com/in/lucascastrodev/",
+				"username": "lucascastrodev"
+			}
+		]
+	},
+	"work": [
+		{
+			"name": "Faster (fstr)",
+			"location": "São Paulo, Brazil",
+			"description": "",
+			"remote": true,
+			"position": "Front-end Engineer -> Senior Front-end Engineer",
+			"url": "https://fstr.co/",
+			"startDate": "2022-04",
+			"summary": "Currently working on the development of the Faster front-end platform.",
+			"highlights": [
+				"Migrated the entire codebase from Vue 2 to Vue 3, reducing build time by 80%.",
+				"Led the development of a custom components library.",
+				"Integrated platform analysis tools such as Hotjar and Sentry.",
+				"Managed the AWS infrastructure supporting the front-end.",
+				"Accelerated the onboarding and ramp-up process for new developers.",
+				"Documented and implemented unit tests for components and services."
+			]
+		},
+		{
+			"name": "SellersFi",
+			"location": "New York, USA",
+			"description": "",
+			"remote": true,
+			"position": "Front-end Developer",
+			"url": "https://sellersfi.com/",
+			"startDate": "2021-05",
+			"endDate": "2022-04",
+			"summary": "",
+			"highlights": [
+				"Contributed to the deployment of micro-frontends using the Single SPA.",
+				"Helped the migration from a legacy MVC architecture to a modern SPA.",
+				"Collaborated in a design system to be used across multiple micro-frontends."
+			]
+		},
+		{
+			"name": "Freelancer",
+			"location": "",
+			"description": "",
+			"position": "Front-end Developer",
+			"url": "https://lucascastro.dev",
+			"startDate": "2017-08",
+			"endDate": "2021-05",
+			"summary": "Worked as freelance front-end developer for clients in Brazil.",
+			"highlights": []
+		}
+	],
+	"skills": [
+		{
+			"name": "Front-end",
+			"level": "",
+			"keywords": [
+				"Vue",
+				"React",
+				"JavaScript",
+				"TypeScript",
+				"Node",
+				"Bun",
+				"CSS/SASS"
+			]
+		},
+		{
+			"name": "DevOps",
+			"level": "",
+			"keywords": ["Git", "AWS", "Azure"]
+		}
+	],
+	"certificates": [
+		{
+			"name": "Instructor of the Mini-Course 'Introduction to Modern Vue.js",
+			"date": "2023-12",
+			"issuer": "Faculdade de Petrolina"
+		},
+		{
+			"name": "Clean Code and Clean Architecture",
+			"date": "2022-07",
+			"url": "https://app.branas.io/api/public/certificates/ec1f2ede-d256-47b3-831f-353f87afa491/share",
+			"issuer": "branas.io"
+		},
+		{
+			"name": "UX Certification - UX, UI and Product Design",
+			"date": "2022-02",
+			"issuer": "UX Unicórnio"
+		},
+		{
+			"name": "Complete Web Design",
+			"date": "2021-01",
+			"url": "https://origamid.com/certificate/b3b0122b",
+			"issuer": "Origamid"
+		}
+	],
+	"publications": [
+		{
+			"name": "PetHelp — Facilitando a experiência de agendamentos de consultas e de exames veterinários",
+			"publisher": "Medium",
+			"releaseDate": "2022-02",
+			"url": "https://medium.com/@castroclucas/pethelp-facilitando-a-experiência-de-agendamentos-de-consultas-e-de-exames-veterinários-1eee0df16f25",
+			"summary": ""
+		}
+	],
+	"education": [
+		{
+			"institution": "UX Unicórnio",
+			"url": "https://uxunicornio.com.br",
+			"area": "Complete UX Program",
+			"studyType": "Certification",
+			"startDate": "2021-02",
+			"endDate": "2022-02",
+			"score": "",
+			"courses": [
+				"One-year UX training program covering advanced product management, strategy, usability, research, writing, prototyping and relevant soft skills, all applied to a case study portfolio."
+			]
+		},
+		{
+			"institution": "Faculdade de Petrolina",
+			"url": "http://www.facape.br/",
+			"area": "Computer Science",
+			"studyType": "Bachelor",
+			"startDate": "2018-01",
+			"endDate": "2022-01",
+			"unfinished": true,
+			"score": "",
+			"courses": []
+		}
+	],
+	"languages": [
+		{
+			"language": "English",
+			"fluency": "Full professional proficiency"
+		},
+		{
+			"language": "Portuguese",
+			"fluency": "Native speaker"
+		}
+	]
+}
