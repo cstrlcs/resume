@@ -1,0 +1,28 @@
+[38;5;32m   __
+  / /  __ _________ ____   
+ / /__/ // / __/ _ `(_-<   
+/____/\_,_/\__/\_,_/___/   
+  _____         __         
+ / ___/__ ____ / /________ 
+/ /__/ _ `(_-</ __/ __/ _ \
+\___/\_,_/___/\__/_/  \___/(B[m
+
+[1mLucas Castro(B[m | [2mcontact@lucascastro.dev(B[m | [2mhttps://lucascastro.dev/(B[m
+[1mSenior Front-end Engineer @ Faster | TypeScript, Vue, React, UX, Accessibility & Performance(B[m
+\n[2m###| (B[m [1m[38;5;32mAbout(B[m(B[m [2m |===================================(B[m\n
+I'm a front-end developer with a passion for building scalable, high-performance web applications and components. I strongly believe that the value of an application is directly tied to its usability and accessibility.
+
+Currently exploring the world of Open Source, publishing and contributing to projects that benefit both the community and other developers.
+\n[2m###| (B[m [1m[38;5;32mLinks(B[m(B[m [2m |===================================(B[m\n
+  [2m-(B[m GitHub [[2mhttps://github.com/cstrlcs(B[m]
+  [2m-(B[m Linkedin [[2mhttps://linkedin.com/in/lucascastrodev/(B[m]
+\n[2m###| (B[m [1m[38;5;32mWork(B[m(B[m [2m |====================================(B[m\n
+[2m[2022-04](B[m | [1mFront-end Engineer -> Senior Front-end Engineer(B[m [1m@(B[m Faster (fstr)
+      [2mCurrently working on the development of the Faster front-end platform.(B[m
+[2m[2021-05](B[m | [1mFront-end Developer(B[m [1m@(B[m SellersFi
+      [2mWorked as a front-end developer on the development of the SellersFi platform.(B[m
+[2m[2017-08](B[m | [1mFront-end Developer(B[m [1m@(B[m Freelancer
+      [2mWorked as freelance front-end developer for clients in Brazil.(B[m
+\n[2m###| (B[m [1m[38;5;32mSkills(B[m(B[m [2m |==================================(B[m\n
+  [2m-(B[m Vue React JavaScript TypeScript Node Bun CSS/SASS Git AWS Azure
+\n

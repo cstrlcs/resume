@@ -1,66 +1,77 @@
-#/bin/bash
+#!/bin/bash
+json=$(cat resume.json)
 
-eval $(curl -s https://raw.githubusercontent.com/cstrlcs/resume/main/resume.conf)
+parse_array() {
+  name=$(echo "$json" | jq -r "$1 | map($2 | tojson) | .[]")
+  echo $name
+}
+
+parse_prop () {
+  echo "$json" | jq -r "$1"
+}
 
 bold() { echo "$(tput bold)$1$(tput sgr0)"; }
 dim() { echo "$(tput dim)$1$(tput sgr0)"; }
-colored() { echo "$(tput setaf 60)$1$(tput sgr0)"; }
+colored() { echo "$(tput setaf 32)$1$(tput sgr0)"; }
 
-output_ascii() {
-  echo "$(tput setaf 60) $(tput bold)"
-  cat << "EOF"
-   __                      
-  / /  __ _________ ____   
- / /__/ // / __/ _ `(_-<   
-/____/\_,_/\__/\_,_/___/   
-  _____         __         
- / ___/__ ____ / /________ 
-/ /__/ _ `(_-</ __/ __/ _ \
-\___/\_,_/___/\__/_/  \___/
-                           
-EOF
-
-echo $(tput sgr0)
+output() {
+  echo "$1" >> resume.txt
 }
 
-output_date() { 
-  echo "$(dim [$1])"
+format_section() {
+  echo "\n$(dim "###| ") $(bold $(colored $1)) $(dim " |$(printf '%*s' "$((40 - ${#1}))" | tr ' ' '=')")\n"
 }
 
-output_section() {
-  echo
-  echo "$(dim "###| ") $(bold $(colored $1)) $(dim " |$(printf '%*s' "$((40 - ${#1}))" | tr ' ' '=')")"
-  echo
-}
-
-output_item () {
+format_item () {
   echo "  $(dim "-") $1"
 }
 
-output_ascii
-echo "$(bold "$name") | $(dim "$email") | $(dim "$url")"
-echo "$(bold "$label")"
+format_date() { 
+  echo "$(dim [$1])"
+}
 
-output_section "About"
+> resume.txt
 
-echo "$summary"
+cat <<EOF > resume.txt
+$(tput setaf 32)   __
+  / /  __ _________ ____   
+ / /__/ // / __/ _ \`(_-<   
+/____/\_,_/\\__/\_,_/___/   
+  _____         __         
+ / ___/__ ____ / /________ 
+/ /__/ _ \`(_-</ __/ __/ _ \\
+\\___/\\_,_/___/\\__/_/  \\___/$(tput sgr0)
 
-output_section "Links"
+EOF
 
-for i in "${!links[@]}"
-do
-  output_item "${links_labels[$i]} [$(dim ${links[$i]})]"
+eval "links=($(parse_array '.basics.profiles' '.url'))"
+eval "links_labels=($(parse_array '.basics.profiles' '.network'))"
+
+eval "works=($(parse_array '.work' '.position'))"
+eval "works_companies=($(parse_array '.work' '.name'))"
+eval "works_dates=($(parse_array '.work' '.startDate'))"
+eval "works_summaries=($(parse_array '.work' '.summary'))"
+
+eval "skills=($(parse_array '.skills' '.keywords[]'))"
+
+output "$(bold "$(parse_prop '.basics.name')") | $(dim "$(parse_prop '.basics.email')") | $(dim "$(parse_prop '.basics.url')")"
+output "$(bold "$(parse_prop '.basics.label')")"
+
+output "$(format_section "About")"
+output "$(parse_prop '.basics.summary')"
+
+output "$(format_section "Links")"
+for i in "${!links[@]}"; do
+  output "$(format_item "${links_labels[$i]} [$(dim ${links[$i]})]")"
 done
 
-output_section "Work"
-
-for i in "${!works[@]}"
-do
-  output_item "$(output_date ${works_dates[$i]}) | $(bold "${works[$i]}") $(bold "@") ${works_companies[$i]}"
-  echo "      $(dim "${works_summaries[$i]}")"
+output "$(format_section "Work")"
+for i in "${!works[@]}"; do
+  output "$(format_date ${works_dates[$i]}) | $(bold "${works[$i]}") $(bold "@") ${works_companies[$i]}"
+  output "      $(dim "${works_summaries[$i]}")"
 done
 
-output_section "Skills"
-output_item "${skills[*]}"
+output "$(format_section "Skills")"
+output "$(format_item "${skills[*]}")"
 
-#printf '\n\e]8;;https://resume.lucascastro.dev/\e\\Click here see my full CV 🚀\e]8;;\e\\\n\n'
+output "\n"
